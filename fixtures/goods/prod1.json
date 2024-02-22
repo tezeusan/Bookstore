@@ -1,0 +1,857 @@
+[
+  {
+    "model": "goods.products",
+    "pk": 1,
+    "fields": {
+      "name": "The Silent Symphony",
+      "author": "Emily Morrison",
+      "slug": "the-silent-symphony",
+      "description": "A captivating novel that explores the complexities of human relationships through the lens of music and silence.",
+      "image": "",
+      "price": "19.99",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 4
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 2,
+    "fields": {
+      "name": "Echoes of Eternity",
+      "author": "Daniel Harper",
+      "slug": "echoes-of-eternity",
+      "description": "An epic fantasy tale filled with magic, mythical creatures, and a quest for eternal truth.",
+      "image": "",
+      "price": "24.95",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 4
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 3,
+    "fields": {
+      "name": "Shadows in the Mist",
+      "author": "Sarah Holloway",
+      "slug": "shadows-in-the-mist",
+      "description": "A gripping mystery novel set in a small town where secrets lurk in every corner, shrouded by the mist.",
+      "image": "",
+      "price": "17.99",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 4
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 4,
+    "fields": {
+      "name": "Whispers of the Wind",
+      "author": "Jonathan Rivers",
+      "slug": "whispers-of-the-wind",
+      "description": "A poetic journey through life's highs and lows, where the wind carries tales of love, loss, and resilience.",
+      "image": "",
+      "price": "14.99",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 4
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 5,
+    "fields": {
+      "name": "Beyond the Canvas",
+      "author": "Olivia Turner",
+      "slug": "beyond-the-canvas",
+      "description": "An art-inspired novel that delves into the lives of painters, their masterpieces, and the emotions they evoke.",
+      "image": "",
+      "price": "22.50",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 4
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 6,
+    "fields": {
+      "name": "The Clockwork Garden",
+      "author": "Benjamin Steele",
+      "slug": "the-clockwork-garden",
+      "description": "A steampunk adventure where gears and gadgets intertwine with nature in a garden of mechanical wonders",
+      "image": "",
+      "price": "27.99",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 4
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 7,
+    "fields": {
+      "name": "Threads of Destiny",
+      "author": "Jessica Archer",
+      "slug": "threads-of-destiny",
+      "description": "A tale of interconnected lives and the invisible threads that bind us all together in the tapestry of existence.",
+      "image": "",
+      "price": "20.49",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 4
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 8,
+    "fields": {
+      "name": "Midnight Serenade",
+      "author": "Lucas Chambers",
+      "slug": "midnight-serenade",
+      "description": "A noir-style detective novel set in the smoky streets of a city where jazz and crime intertwine.",
+      "image": "",
+      "price": "23.75",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 4
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 9,
+    "fields": {
+      "name": "Enchanted Reflections",
+      "author": "Isabella Grace",
+      "slug": "enchanted-reflections",
+      "description": "A magical journey through mirrors that reveal hidden worlds and reflections that defy reality.",
+      "image": "",
+      "price": "18.99",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 4
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 10,
+    "fields": {
+      "name": "Ripples in Time",
+      "author": "Michael Anderson",
+      "slug": "ripples-in-time",
+      "description": "",
+      "image": "",
+      "price": "21.99",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 4
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 11,
+    "fields": {
+      "name": "Ephemeral Echoes",
+      "author": "Emily Morrison",
+      "slug": "ephemeral-echoes",
+      "description": "A thought-provoking novel that explores the transient nature of memories and their lasting impact on our lives.",
+      "image": "",
+      "price": "21.99",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 5
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 12,
+    "fields": {
+      "name": "Chronicles of the Celestial",
+      "author": "Daniel Harper",
+      "slug": "chronicles-of-the-celestial",
+      "description": "A sweeping novel that follows the destinies of celestial beings as they navigate the challenges of existence.",
+      "image": "",
+      "price": "26.50",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 5
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 13,
+    "fields": {
+      "name": "Mysteries Unveiled",
+      "author": "Sarah Holloway",
+      "slug": "mysteries-unveiled",
+      "description": "A novel filled with intrigue and revelations, as characters uncover hidden truths that reshape their lives.",
+      "image": "",
+      "price": "18.95",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 5
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 14,
+    "fields": {
+      "name": "Temporal Whispers",
+      "author": "Jonathan Rivers",
+      "slug": "temporal-whispers",
+      "description": "A novel that explores the complexities of time, with characters facing the consequences of their choices across temporal landscapes.",
+      "image": "",
+      "price": "24.99",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 5
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 15,
+    "fields": {
+      "name": "Canvas of Emotions",
+      "author": "Olivia Turner",
+      "slug": "canvas-of-emotions",
+      "description": "A novel that delves into the emotional depths of characters, painting a vivid picture of the human experience.",
+      "image": "",
+      "price": "19.99",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 5
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 16,
+    "fields": {
+      "name": "Gears of Destiny",
+      "author": "Benjamin Steele",
+      "slug": "gears-of-destiny",
+      "description": "A novel set in a steampunk world where the gears of fate turn, shaping the lives of its characters.",
+      "image": "",
+      "price": "28.75",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 5
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 17,
+    "fields": {
+      "name": "Invisible Bonds",
+      "author": "Jessica Archer",
+      "slug": "invisible-bonds",
+      "description": "A novel that explores the invisible connections between people, weaving a narrative of intertwined destinies.",
+      "image": "",
+      "price": "22.49",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 5
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 18,
+    "fields": {
+      "name": "Jazz Noir Chronicles",
+      "author": "Lucas Chambers",
+      "slug": "jazz-noir-chronicles",
+      "description": "",
+      "image": "",
+      "price": "25.99",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 5
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 19,
+    "fields": {
+      "name": "Reflections Enchanted",
+      "author": "Isabella Grace",
+      "slug": "reflections-enchanted",
+      "description": "A novel that takes readers on a magical journey through enchanted mirrors and fantastical realms.",
+      "image": "",
+      "price": "20.99",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 5
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 20,
+    "fields": {
+      "name": "Timeless Echoes",
+      "author": "Michael Anderson",
+      "slug": "timeless-echoes",
+      "description": "A novel that explores the timeless themes of love, loss, and the enduring echoes of the human experience.",
+      "image": "",
+      "price": "23.50",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 5
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 21,
+    "fields": {
+      "name": "Whispers of Twilight",
+      "author": "Emily Morrison",
+      "slug": "whispers-of-twilight",
+      "description": "A collection of short stories that unfold in the magical moments between day and night, exploring themes of transition and transformation.",
+      "image": "",
+      "price": "12.99",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 6
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 22,
+    "fields": {
+      "name": "Celestial Fragments",
+      "author": "Daniel Harper",
+      "slug": "celestial-fragments",
+      "description": "Short stories that offer glimpses into the lives of celestial beings, capturing the fragments of their eternal existence.",
+      "image": "",
+      "price": "15.50",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 6
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 23,
+    "fields": {
+      "name": "Mist-covered Secrets",
+      "author": "Sarah Holloway",
+      "slug": "mist-covered-secrets",
+      "description": "Intriguing short stories set in a town blanketed by mist, where secrets are revealed in unexpected and mysterious ways.",
+      "image": "",
+      "price": "9.95",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 6
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 24,
+    "fields": {
+      "name": "Temporal Whispers: Snapshots in Time",
+      "author": "Jonathan Rivers",
+      "slug": "temporal-whispers-snapshots-in-time",
+      "description": "A collection of short stories that capture fleeting moments in time, exploring the consequences of choices made in an instant",
+      "image": "",
+      "price": "14.99",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 6
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 25,
+    "fields": {
+      "name": "Brushstrokes of Emotion",
+      "author": "Olivia Turner",
+      "slug": "brushstrokes-of-emotion",
+      "description": "Short stories that paint emotional landscapes, each stroke revealing a different facet of the human experience.",
+      "image": "",
+      "price": "11.99",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 6
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 26,
+    "fields": {
+      "name": "Cogs and Chronicles",
+      "author": "Benjamin Steele",
+      "slug": "cogs-and-chronicles",
+      "description": "Short stories set in a steampunk world, where cogs and gears drive the narratives of characters facing unique challenges.",
+      "image": "",
+      "price": "17.75",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 6
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 27,
+    "fields": {
+      "name": "Invisible Threads: Moments Unseen",
+      "author": "Jessica Archer",
+      "slug": "invisible-threads-moments-unseen",
+      "description": "Short stories that explore the invisible threads connecting lives, capturing moments that often go unnoticed.",
+      "image": "",
+      "price": "13.49",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 6
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 28,
+    "fields": {
+      "name": "Nocturnal Jazz Notes",
+      "author": "Lucas Chambers",
+      "slug": "nocturnal-jazz-notes",
+      "description": "Short stories infused with the essence of jazz and noir, each note unraveling a tale of mystery and intrigue.",
+      "image": "",
+      "price": "15.99",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 6
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 29,
+    "fields": {
+      "name": "Enchanted Mirrors: Microrealms",
+      "author": "Isabella Grace",
+      "slug": "enchanted-mirrors-microrealms",
+      "description": "Short stories that transport readers to microrealms within enchanted mirrors, each holding a unique and magical story.",
+      "image": "",
+      "price": "14.99",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 6
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 30,
+    "fields": {
+      "name": "Echoes of Moments Past",
+      "author": "Michael Anderson",
+      "slug": "echoes-of-moments-past",
+      "description": "Short stories that echo moments from the past, reflecting on the enduring impact of fleeting experiences.",
+      "image": "",
+      "price": "16.50",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 6
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 31,
+    "fields": {
+      "name": "Whispers of the Soul",
+      "author": "Emily Morrison",
+      "slug": "whispers-of-the-soul",
+      "description": "A collection of poetic verses that delve into the depths of the soul, exploring the beauty and complexity of human emotions.",
+      "image": "",
+      "price": "10.99",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 7
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 32,
+    "fields": {
+      "name": "Celestial Sonnets",
+      "author": "Daniel Harper",
+      "slug": "celestial-sonnets",
+      "description": "Sonnets that soar to celestial heights, capturing the essence of otherworldly beauty and eternal love.",
+      "image": "",
+      "price": "12.50",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 7
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 33,
+    "fields": {
+      "name": "Mistful Verses",
+      "author": "Sarah Holloway",
+      "slug": "mistful-verses",
+      "description": "Poetic verses shrouded in mist, where words dance and weave tales of mystery and hidden truths.",
+      "image": "",
+      "price": "8.95",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 7
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 34,
+    "fields": {
+      "name": "Temporal Echoes: Poetic Moments",
+      "author": "Jonathan Rivers",
+      "slug": "temporal-echoes-poetic-moments",
+      "description": "Poetic moments frozen in time, reflecting the echoes of past, present, and future emotions.",
+      "image": "",
+      "price": "11.99",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 7
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 35,
+    "fields": {
+      "name": "Canvas of Emotions: Poetic Strokes",
+      "author": "Olivia Turner",
+      "slug": "canvas-of-emotions-poetic-strokes",
+      "description": "Poetic strokes that paint the canvas of emotions, each verse a vivid expression of the human heart.",
+      "image": "",
+      "price": "9.99",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 7
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 36,
+    "fields": {
+      "name": "Gears of the Heart: Poetic Mechanisms",
+      "author": "Benjamin Steele",
+      "slug": "gears-of-the-heart-poetic-mechanisms",
+      "description": "Poetic mechanisms that explore the intricate gears of the heart, turning with the rhythm of love and longing.",
+      "image": "",
+      "price": "15.75",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 7
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 37,
+    "fields": {
+      "name": "Invisible Melodies: Poetic Harmony",
+      "author": "Jessica Archer",
+      "slug": "invisible-melodies-poetic-harmony",
+      "description": "Poetic harmonies that resonate through invisible threads, weaving melodies of life's interconnected moments.",
+      "image": "",
+      "price": "12.49",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 7
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 38,
+    "fields": {
+      "name": "Nocturnal Jazz Notes: Poetic Noir",
+      "author": "Lucas Chambers",
+      "slug": "nocturnal-jazz-notes-poetic-noir",
+      "description": "Poetic noir notes that echo in the night, capturing the jazzy rhythms of mystery and melancholy.",
+      "image": "",
+      "price": "14.99",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 7
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 39,
+    "fields": {
+      "name": "Enchanted Reflections: Poetic Realms",
+      "author": "Isabella Grace",
+      "slug": "enchanted-reflections-poetic-realms",
+      "description": "Poetic realms within enchanted reflections, where words create magical landscapes and ethereal emotions.",
+      "image": "",
+      "price": "11.99",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 7
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 40,
+    "fields": {
+      "name": "Echoes of Eternity: Poetic Reverie",
+      "author": "Michael Anderson",
+      "slug": "echoes-of-eternity-poetic-reverie",
+      "description": "Poetic reveries that echo through eternity, contemplating the timeless themes of existence and transcendence.",
+      "image": "",
+      "price": "13.50",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 7
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 41,
+    "fields": {
+      "name": "Silent Tears",
+      "author": "Emily Morrison",
+      "slug": "silent-tears",
+      "description": "A poignant drama that follows the lives of characters grappling with inner struggles and the healing power of compassion.",
+      "image": "",
+      "price": "14.99",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 8
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 42,
+    "fields": {
+      "name": "Celestial Cries",
+      "author": "Daniel Harper",
+      "slug": "celestial-cries",
+      "description": "A dramatic exploration of celestial beings facing existential crises, questioning the purpose of their eternal existence.",
+      "image": "",
+      "price": "16.50",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 8
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 43,
+    "fields": {
+      "name": "Whispers in the Shadows",
+      "author": "Sarah Holloway",
+      "slug": "whispers-in-the-shadows",
+      "description": "A gripping drama set in a town plagued by shadows, revealing the hidden conflicts and secrets of its inhabitants.",
+      "image": "",
+      "price": "12.95",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 8
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 44,
+    "fields": {
+      "name": "Temporal Crossroads",
+      "author": "Jonathan Rivers",
+      "slug": "temporal-crossroads",
+      "description": "A dramatic narrative that unfolds at the crossroads of time, where characters confront pivotal moments that shape their destinies.",
+      "image": "",
+      "price": "15.99",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 8
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 45,
+    "fields": {
+      "name": "Emotional Canvases",
+      "author": "Olivia Turner",
+      "slug": "emotional-canvases",
+      "description": "A drama that unfolds through emotional canvases, exploring the vivid hues of human relationships and struggles.",
+      "image": "",
+      "price": "13.99",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 8
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 46,
+    "fields": {
+      "name": "Gears of Despair",
+      "author": "Benjamin Steele",
+      "slug": "gears-of-despair",
+      "description": "A dramatic tale set in a steampunk world, where characters grapple with the gears of despair in the face of adversity.",
+      "image": "",
+      "price": "18.75",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 8
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 47,
+    "fields": {
+      "name": "Invisible Chains",
+      "author": "Jessica Archer",
+      "slug": "invisible-chains",
+      "description": "A drama that explores the invisible chains binding individuals, confronting societal expectations and personal liberation.",
+      "image": "",
+      "price": "14.49",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 8
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 48,
+    "fields": {
+      "name": "Quantum Reverie",
+      "author": "Emily Morrison",
+      "slug": "quantum-reverie",
+      "description": "A mind-bending science fiction tale that explores the intersections of quantum realities and the impact of choices on parallel worlds.",
+      "image": "",
+      "price": "18.99",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 9
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 49,
+    "fields": {
+      "name": "Whispers of Deceit",
+      "author": "Daniel Harper",
+      "slug": "whispers-of-deceit",
+      "description": "A detective fiction unraveling a web of whispers, lies, and hidden motives as characters delve into a complex mystery.",
+      "image": "",
+      "price": "20.50",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 10
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 50,
+    "fields": {
+      "name": "Echoes of Eras",
+      "author": "Sarah Holloway",
+      "slug": "echoes-of-eras",
+      "description": "Historical fiction that spans different eras, weaving together stories of characters entangled in the threads of history.",
+      "image": "",
+      "price": "16.95",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 11
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 51,
+    "fields": {
+      "name": "Enchanted Realms",
+      "author": "Jonathan Rivers",
+      "slug": "enchanted-realms",
+      "description": "A fantasy adventure set in enchanted realms, where characters embark on a quest to restore balance to a magical world.",
+      "image": "",
+      "price": "19.99",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 12
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 52,
+    "fields": {
+      "name": "Portraits of Reality",
+      "author": "Olivia Turner",
+      "slug": "portraits-of-reality",
+      "description": "Realistic fiction that paints vivid portraits of ordinary lives, delving into the complexities of human relationships.",
+      "image": "",
+      "price": "17.99",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 13
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 53,
+    "fields": {
+      "name": "Temporal Nexus",
+      "author": "Benjamin Steele",
+      "slug": "temporal-nexus",
+      "description": "A science fiction saga exploring the intricate connections of characters across a temporal nexus of parallel universes.",
+      "image": "",
+      "price": "23.75",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 9
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 54,
+    "fields": {
+      "name": "Shadows in the City",
+      "author": "Jessica Archer",
+      "slug": "shadows-in-the-city",
+      "description": "Detective fiction set in the shadowy alleys of a city, where characters uncover dark secrets hidden within its walls.",
+      "image": "",
+      "price": "17.49",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 10
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 55,
+    "fields": {
+      "name": "Chronicles of Centuries",
+      "author": "Lucas Chambers",
+      "slug": "chronicles-of-centuries",
+      "description": "Historical fiction spanning centuries, chronicling the lives of characters entwined with historical events.",
+      "image": "",
+      "price": "21.99",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 11
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 56,
+    "fields": {
+      "name": "Realm of Dreams",
+      "author": "Isabella Grace",
+      "slug": "realm-of-dreams",
+      "description": "Fantasy that explores a realm of dreams, where characters navigate a world shaped by the boundaries of imagination.",
+      "image": "",
+      "price": "18.99",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 12
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 57,
+    "fields": {
+      "name": "Urban Chronicles",
+      "author": "Michael Anderson",
+      "slug": "urban-chronicles",
+      "description": "Realistic fiction portraying the urban experience, with characters facing the challenges and joys of city life.",
+      "image": "",
+      "price": "20.50",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 13
+    }
+  }
+]
