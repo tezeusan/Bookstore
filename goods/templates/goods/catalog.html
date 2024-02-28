@@ -12,28 +12,36 @@
 {% block content %}
 
 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-    {% for product in goods%}
+    {% for product in goods %}
     <div class="col mb-5">
         <div class="card h-100">
             <!-- Product image-->
-            <img class="card-img-top" src="{% static product.image %}" alt="..."/>
+            {% if product.image %}
+                <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}"/>
+            {% else  %}
+                <img class="card-img-top" src="{% static "images/Not found image.png" %}" alt="..."/>
+            {% endif %}
             <!-- Product details-->
             <div class="card-body p-4">
                 <div class="text-center">
                     <!-- Product name-->
                     <a href="#!" class="text-decoration-none text-dark">
                         <h5 class="fw-bolder">{{ product.name }}</h5>
+                        <p class="fw-light">by {{ product.author }}</p>
                     </a>
-                    <!-- Product price-->
-                    {{ product.price }}$
                     <!-- Product description-->
                     <p class="card-text">{{ product.description }}</p>
-                </div>
-            </div>
-            <!-- Product actions-->
-            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <div class="text-center">
-                    <a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <!-- Product price-->
+                            <span class="fw-bold">{{ product.price }}$</span>
+                            <!-- Shopping cart icon instead of "Add to cart" text-->
+                            <a class="btn btn-outline-dark" href="#">
+                                <i class="bi bi-cart"></i> <!-- Bootstrap Icons cart icon -->
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
