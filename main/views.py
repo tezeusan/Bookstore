@@ -1,9 +1,8 @@
 from django.shortcuts import render
 from goods.models import Categories
 
+
 def index(request):
-
-
     context = {
         "title": "The Book Haven - Main",
         'content': 'Shop in style - Main',
