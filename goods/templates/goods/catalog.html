@@ -29,7 +29,7 @@
                     <div class="card-body p-4">
                         <div class="text-center">
                             <!-- Product name-->
-                            <a href="{% url "catalog:product" product.display_id %}" class="text-decoration-none text-dark">
+                            <a href="{% url "catalog:product" product.slug %}" class="text-decoration-none text-dark">
                             <h5 class="fw-bolder">{{ product.name }}</h5>
                             </a>
                             <p class="fw-light">by {{ product.author }}</p>
