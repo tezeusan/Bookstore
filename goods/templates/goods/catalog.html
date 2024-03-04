@@ -34,7 +34,7 @@
                             </a>
                             <p class="fw-light">by {{ product.author }}</p>
                             <!-- Product description-->
-                            <p class="mb-1">{{ product.description }}</p>
+                            <p class="mb-1">{{ product.description|truncatechars:40}}</p>
                             <!-- Product price-->
                             {% if product.discount %}
                             <span class="text-muted text-decoration-line-through">{{ product.price }}$</span>
