@@ -1,55 +1,80 @@
-{% extends 'main/base.html' %}
-{% load static %}
+{% extends 'main/base.html' %}  <!-- Inherits from the base template -->
+{% load static %}  <!-- Load static to use static files like CSS, JS, images -->
 
-{% block title %}{{ context }}{% endblock %}
+{% block title %}{{ context }}{% endblock %}  <!-- Dynamically sets the page title -->
 
 {% block header %}
-  <!-- Header -->
+  <!-- Header content block, displaying page header and description -->
   <h1 class="display-4 fw-bolder">{{ content }}</h1>
   <p class="lead fw-normal text-white-50 mb-0">{{ description }}</p>
-  <!-- Add more content as needed -->
+  <!-- Additional header content can be added here -->
 {% endblock %}
 
 {% block content %}
-  <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-    {% for product in goods %}
-            <div class="col mb-5">
-                <div class="card h-100">
-                    <!-- Sale badge-->
-                    {% if product.discount %}
-                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">{{ product.discount|floatformat:"0" }}% Sale</div>
-                    {% endif %}
-                    <!-- Product image-->
-                    {% if product.image %}
-                    <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}"/>
-                    {% else %}
-                    <img class="card-img-top" src="{% static 'images/Not found image.png' %}" alt="Image not found"/>
-                    {% endif %}
-                    <!-- Product details-->
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <!-- Product name-->
-                            <a href="{% url "catalog:product" product.slug %}" class="text-decoration-none text-dark">
-                            <h5 class="fw-bolder">{{ product.name }}</h5>
-                            </a>
-                            <p class="fw-light">by {{ product.author }}</p>
-                            <!-- Product description-->
-                            <p class="mb-1">{{ product.description|truncatechars:40}}</p>
-                            <!-- Product price-->
-                            {% if product.discount %}
-                            <span class="text-muted text-decoration-line-through">{{ product.price }}$</span>
-                            {{ product.sell_price }}$
-                            {% else %}
-                            {{ product.price }}$
-                            {% endif %}
-                        </div>
+  <!-- Filter dropdown section -->
+    <div class="mb-4">
+        <form class="dropdown d-flex" action="" method="GET">
+            <button class="btn btn-outline-dark dropdown-toggle" type="button" id="filterDropdownButton" data-bs-toggle="dropdown" aria-expanded="false">
+                Filter
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="filterDropdownButton">
+                <li><button class="dropdown-item" type="submit" name="filter" value="newest">Newest</button></li>
+                <li><button class="dropdown-item" type="submit" name="filter" value="price_low_high">Price: Low to High</button></li>
+                <li><button class="dropdown-item" type="submit" name="filter" value="price_high_low">Price: High to Low</button></li>
+                <li><button class="dropdown-item" type="submit" name="filter" value="popular">Most Popular</button></li>
+                <li>
+                    <div class="form-check dropdown-item">
+                        <input class="form-check-input" type="checkbox" value="discount" id="discountCheckbox" name="filter">
+                        <label class="form-check-label" for="discountCheckbox">
+                            Discount
+                        </label>
                     </div>
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                </li>
+            </ul>
+        </form>
+    </div>
+  <!-- Main content block for displaying products -->
+  <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 ">
+    {% for product in goods %}
+        <div class="col mb-5">
+            <div class="card h-100">
+                <!-- Sale badge, shown only if the product has a discount -->
+                {% if product.discount %}
+                <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                    {{ product.discount|floatformat:"0" }}% Sale
+                </div>
+                {% endif %}
+                <!-- Product image -->
+                {% if product.image %}
+                <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}"/>
+                {% else %}
+                <img class="card-img-top" src="{% static 'images/Not found image.png' %}" alt="Image not found"/>
+                {% endif %}
+                <!-- Product details -->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <!-- Product name and author -->
+                        <a href="{% url "catalog:product" product.slug %}" class="text-decoration-none text-dark">
+                            <h5 class="fw-bolder">{{ product.name }}</h5>
+                        </a>
+                        <p class="fw-light">by {{ product.author }}</p>
+                        <!-- Truncated product description -->
+                        <p class="mb-1">{{ product.description|truncatechars:40 }}</p>
+                        <!-- Product pricing, with or without discount -->
+                        {% if product.discount %}
+                        <span class="text-muted text-decoration-line-through">{{ product.price }}$</span>
+                        {{ product.sell_price }}$
+                        {% else %}
+                        {{ product.price }}$
+                        {% endif %}
                     </div>
                 </div>
+                <!-- Product actions (e.g., Add to cart button) -->
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                </div>
             </div>
-            {% endfor %}
+        </div>
+    {% endfor %}
   </div>
 {% endblock %}

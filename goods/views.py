@@ -5,6 +5,8 @@ from goods.models import Products
 
 def catalog(request, category_slug):
     page = request.GET.get('page', 1)
+    page = request.GET.get('', 1)
+    page = request.GET.get('page', 1)
 
     if category_slug == 'all':
         goods = Products.objects.all()
