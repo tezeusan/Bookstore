@@ -30,11 +30,11 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="shopDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Books</a>
                     <ul class="dropdown-menu" aria-labelledby="shopDropdown">
-                        <li><a class="dropdown-item" href="{% url "catalog:index" %}">New Arrivals</a></li>
+                        <li><a class="dropdown-item" href="#">New Arrivals</a></li>
                         <li><hr class="dropdown-divider" /></li>
                         {% tag_categories as categories %}
                         {% for category in categories %}
-                            <li><a class="dropdown-item" href="{% url "catalog:index" %}">{{category.name}}</a></li>
+                            <li><a class="dropdown-item" href="{% url "catalog:index" category.slug %}">{{category.name}}</a></li>
                         {% endfor %}
 
                     </ul>
