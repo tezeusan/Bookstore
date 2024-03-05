@@ -1,5 +1,6 @@
 {% extends 'main/base.html' %}  <!-- Inherits from the base template -->
 {% load static %}  <!-- Load static to use static files like CSS, JS, images -->
+{% load goods_tags %}
 
 {% block title %}{{ context }}{% endblock %}  <!-- Dynamically sets the page title -->
 
@@ -11,28 +12,48 @@
 {% endblock %}
 
 {% block content %}
-  <!-- Filter dropdown section -->
-    <div class="mb-4">
-        <form class="dropdown d-flex" action="" method="GET">
-            <button class="btn btn-outline-dark dropdown-toggle" type="button" id="filterDropdownButton" data-bs-toggle="dropdown" aria-expanded="false">
-                Filter
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="filterDropdownButton">
-                <li><button class="dropdown-item" type="submit" name="filter" value="newest">Newest</button></li>
-                <li><button class="dropdown-item" type="submit" name="filter" value="price_low_high">Price: Low to High</button></li>
-                <li><button class="dropdown-item" type="submit" name="filter" value="price_high_low">Price: High to Low</button></li>
-                <li><button class="dropdown-item" type="submit" name="filter" value="popular">Most Popular</button></li>
-                <li>
-                    <div class="form-check dropdown-item">
-                        <input class="form-check-input" type="checkbox" value="discount" id="discountCheckbox" name="filter">
-                        <label class="form-check-label" for="discountCheckbox">
-                            Discount
-                        </label>
-                    </div>
-                </li>
-            </ul>
-        </form>
-    </div>
+<!-- Filter Form using only Bootstrap classes -->
+<div class="dropdown mb-2">
+    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Filters
+    </button>
+
+    <form action="" method="get" class="dropdown-menu p-4 text-bg-dark">
+        <div class="mb-3">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="on_sale" id="saleCheck" value="on" {% if request.GET.on_sale == 'on' %}checked{% endif %}>
+                {% comment %}<input type="hidden" name="q" value="{{ request.GET.q }}">{% endcomment %}
+                <label class="form-check-label" for="saleCheck">
+                    Sale Items
+                </label>
+            </div>
+        </div>
+        <div class="mb-3">
+            <p class="mb-1">Sort by:</p>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="order_by" id="defaultSort" value="default" checked {% if request.GET.order_by or request.GET.order_by == 'default' %}checked{% endif %}>
+                <label class="form-check-label" for="defaultSort">
+                    Default
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="order_by" id="priceLowHigh" value="price" {% if request.GET.order_by == 'price' %}checked{% endif %}>
+                <label class="form-check-label" for="priceLowHigh">
+                    Price: Low to High
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="order_by" id="priceHighLow" value="-price" {% if request.GET.order_by == '-price' %}checked{% endif %}>
+                <label class="form-check-label" for="priceHighLow">
+                    Price: High to Low
+                </label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Apply</button>
+    </form>
+</div>
+
+
   <!-- Main content block for displaying products -->
   <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 ">
     {% for product in goods %}
@@ -77,4 +98,26 @@
         </div>
     {% endfor %}
   </div>
+    <!-- Pagination section -->
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            <li class="page-item {% if not goods.has_previous %}disabled{% endif %}">
+                <a class="page-link" href="{% if goods.has_previous %}?{% change_params page=page %}{% else %}#{% endif %}" aria-label="Previous">
+                    &laquo; Previous
+                </a>
+            </li>
+            {% for page in goods.paginator.page_range %}
+                {% if page >= goods.number|add:-2 and page <= goods.number|add:2 %}
+                    <li class="page-item {% if page == goods.number %}active{% endif %}">
+                        <a class="page-link" href="?{% change_params page=page %}">{{ page }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+            <li class="page-item {% if not goods.has_next %}disabled{% endif %}">
+                <a class="page-link" href="{% if goods.has_next %}?page={{ goods.next_page_number }}{% else %}#{% endif %}" aria-label="Next">
+                    Next &raquo;
+                </a>
+            </li>
+        </ul>
+    </nav>
 {% endblock %}
