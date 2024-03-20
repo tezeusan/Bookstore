@@ -1,8 +1,8 @@
-{% extends 'main/base.html' %}  <!-- Inherits from the base template -->
-{% load static %}  <!-- Load static to use static files like CSS, JS, images -->
+{% extends 'main/base.html' %}
+{% load static %}
 {% load goods_tags %}
 
-{% block title %}{{ context }}{% endblock %}  <!-- Dynamically sets the page title -->
+{% block title %}{{ context }}{% endblock %}
 
 {% block header %}
   <!-- Header content block, displaying page header and description -->
@@ -55,6 +55,26 @@
         </form>
     </div>
 
+    {% if request.GET.q %}
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-12">
+                    <div class="alert alert-info text-center" role="alert">
+                        <h4 class="alert-heading">Search Results for "{{ request.GET.q|capfirst }}"</h4>
+                    </div>
+                </div>
+            </div>
+            {% if not goods %}
+                <div class="row">
+                    <div class="col-12">
+                        <div class="alert alert-warning text-center" role="alert">
+                            <h5 class="alert-heading">No results found.</h5>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    {% endif %}
 
   <!-- Main content block for displaying products -->
   <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 ">
@@ -78,11 +98,27 @@
                     <div class="text-center">
                         <!-- Product name and author -->
                         <a href="{% url "catalog:product" product.slug %}" class="text-decoration-none text-dark">
-                            <h5 class="fw-bolder">{{ product.name }}</h5>
+                            <h5 class="fw-bolder">
+                                {% autoescape off %}
+                                    {% if product.headline %}
+                                    {{ product.headline }}
+                                    {% else %}
+                                    {{ product.name }}
+                                    {% endif %}
+                                {% endautoescape %}
+                            </h5>
                         </a>
                         <p class="fw-light">by {{ product.author }}</p>
                         <!-- Truncated product description -->
-                        <p class="mb-1">{{ product.description|truncatechars:40 }}</p>
+                        <p class="mb-1">
+                            {% autoescape off %}
+                                {% if product.bodyline %}
+                                {{ product.bodyline|truncatechars:100 }}
+                                {% else %}
+                                {{ product.description|truncatechars:50 }}
+                                {% endif %}
+                            {% endautoescape %}
+                        </p>
                         <!-- Product pricing, with or without discount -->
                         {% if product.discount %}
                         <span class="text-muted text-decoration-line-through">{{ product.price }}$</span>
