@@ -1,6 +1,20 @@
 from django.db import models
 
 
+class Authors(models.Model):
+    author = models.CharField(max_length=150, blank=True, null=True, default='', verbose_name='Author')
+    slug = models.SlugField(max_length=200, unique=True, blank=True, null=True, verbose_name='Author Slug')
+
+    class Meta:
+        db_table = 'authors'
+        verbose_name = 'Author'
+        verbose_name_plural = 'Authors'
+
+    def __str__(self):
+        return self.author
+
+
+
 class Categories(models.Model):
     name = models.CharField(max_length=150, unique=True, verbose_name='Name')
     slug = models.SlugField(max_length=200, unique=True, blank=True, null=True, verbose_name='URL')
@@ -17,7 +31,7 @@ class Categories(models.Model):
 
 class Products(models.Model):
     name = models.CharField(max_length=150, unique=True, verbose_name='Name')
-    author = models.CharField(max_length=150, blank=True, null=True, default='', verbose_name='Author')
+    author = models.ForeignKey(to=Authors, on_delete=models.CASCADE, verbose_name='Author')
     slug = models.SlugField(max_length=200, unique=True, blank=True, null=True, verbose_name='URL')
     description = models.TextField(blank=True, null=True, verbose_name="Description")
     image = models.ImageField(upload_to='goods_images', blank=True, null=True, verbose_name="Image")
@@ -39,5 +53,5 @@ class Products(models.Model):
 
     def sell_price(self):
         if self.discount:
-            return round(self.price - self.price*self.discount/100, 2)
+            return round(self.price - self.price * self.discount / 100, 2)
         return self.price
