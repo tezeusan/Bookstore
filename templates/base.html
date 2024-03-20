@@ -57,10 +57,11 @@
                     <li class="nav-item dropdown me-4">
                         <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">User</a>
                         <ul class="dropdown-menu" aria-labelledby="userDropdown">
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="{% url 'users:profile' %}">Profile</a></li>
                             <li><a class="dropdown-item" href="{% url 'admin:index' %}">Admin Panel</a></li>
                             <li><hr class="dropdown-divider" /></li>
-                            <li><a class="dropdown-item" href="#">Login</a></li>
+                            <li><a class="dropdown-item" href="{% url 'users:login' %}">Login</a></li>
+                            <li><a class="dropdown-item" href="{% url 'users:logout' %}">Logout</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -84,6 +85,7 @@
     <!-- Main content section -->
     <section class="py-0 flex-grow-1">
         <div class="container px-4 px-lg-5 mt-5">
+            {% include "includes/notifications.html" %}
             {% block content %}{% endblock %}  <!-- Placeholder for the main content of the page -->
         </div>
     </section>
