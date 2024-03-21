@@ -8,7 +8,9 @@
             <h2 class="display-6 text-center mb-4">Sign In</h2>
             <form action="{% url 'user:login' %}" method="post">
                 {% csrf_token %}
-
+                {% if request.GET.next %}
+                    <input type="text" name="next" value="{{request.GET.next}}">
+                {% endif %}
                 <div class="mb-3">
                     <label for="username" class="form-label">Username</label>
                     <input type="text" class="form-control"
