@@ -1,0 +1,35 @@
+{% load static %}
+
+<div class="card mb-3 text-bg-light custom-shadow">
+    <div class="card-header bg-dark text-white">
+        <h5 class="card-title">Товар</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item bg-light">
+            <div class="row text-center align-items-center">
+                <div class="col">
+                    <div class="input-group">
+                        <button type="button" class="btn btn-outline-dark btn-sm decrement" data-cart-id="" data-cart-change-url="">-</button>
+                        <input type="text" class="form-control form-control-sm number" value="1" readonly>
+                        <button type="button" class="btn btn-outline-dark btn-sm increment" data-cart-id="" data-cart-change-url="">+</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <p>x 100.00 = </p>
+                </div>
+                <div class="col"><strong>100.00 $</strong></div>
+                <div class="col">
+                    <a href="{% url 'carts:cart_remove' 1 %}" class="remove-from-cart" data-cart-id="">
+                        <i class="bi bi-trash3-fill" style="font-size: 20px; color: darkred;"></i>
+                    </a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="card mb-3 custom-shadow">
+    <div class="card-footer bg-dark text-white">
+        <p class="float-left">Итого <strong>1</strong> товар(а) на сумму</p>
+        <h4 class="float-right"><strong>100.00 $</strong></h4>
+    </div>
+</div>
