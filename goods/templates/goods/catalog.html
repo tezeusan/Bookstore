@@ -69,21 +69,22 @@
 </div>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Your Cart</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h3 class="text-center mb-4">Your Cart</h3>
-                <div class="container" id="cart-items-container">
+                <h3 class="text-center mb-4">Items in Your Cart</h3>
+                <div id="cart-items-container">
                     <!-- Cart content will be dynamically included here -->
+                    {% include "carts/includes/included_cart.html" %}
                 </div>
-                <div class="text-end mt-3">
-                    <a class="btn btn-primary" href="#">
-                        Checkout
-                    </a>
-                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continue Shopping</button>
+                <a class="btn btn-primary" href="#">Checkout</a>
             </div>
         </div>
     </div>
@@ -166,7 +167,7 @@
                 </div>
                 <!-- Product actions (e.g., Add to cart button) -->
                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url "carts:cart_add" product.slug %}">Add to cart</a></div>
                 </div>
             </div>
         </div>
