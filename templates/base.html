@@ -1,6 +1,7 @@
 {% load static %}  <!-- Load static to use static files like CSS, JS, images -->
 {% load goods_tags %}  <!-- Load custom tags/filters specific to the "goods" app -->
-
+{% load carts_tags %}
+{% user_carts request as carts %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,7 +78,7 @@
                     {% endif %}
                     <li class="nav-item">
                         <a href="{% url 'user:users_cart' %}" class="btn btn-outline-dark">
-                            <i class="bi-cart-fill me-1"></i>Cart <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                            <i class="bi-cart-fill me-1"></i>Cart <span class="badge bg-dark text-white ms-1 rounded-pill">{{ carts.total_quantity }}</span>
                         </a>
                     </li>
 
@@ -93,11 +94,13 @@
             </div>
         </div>
     </header>
+
     <!-- Main content section -->
     <section class="py-0 flex-grow-1">
         <div class="container px-4 px-lg-5 mt-5">
             {% include "includes/notifications.html" %}
-            {% block content %}{% endblock %}  <!-- Placeholder for the main content of the page -->
+            {% block content %}
+            {% endblock %}  <!-- Placeholder for the main content of the page -->
         </div>
     </section>
 
