@@ -81,7 +81,9 @@
                     <!-- Cart Markup -->
                     {% include "carts/includes/included_cart.html" %}
                     <div class="text-end mt-3">
-                        <a class="btn btn-primary" href="#">Place Order</a>
+                        {% if carts %}
+                            <a class="btn btn-primary" href="#">Place Order</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>

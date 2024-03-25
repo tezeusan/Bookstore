@@ -91,7 +91,9 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continue Shopping</button>
+                    {% if carts %}
                     <a class="btn btn-primary" href="#">Checkout</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
