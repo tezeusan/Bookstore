@@ -13,11 +13,13 @@
                 <div class="row text-center align-items-center">
                     <div class="col-4 col-md-2">
                         <div class="input-group input-group-sm">
-                            <button type="button" class="btn btn-outline-dark btn-sm decrement" data-cart-id="{{ cart.id }}" data-cart-change-url="">
+                            <button type="button" class="btn btn-outline-dark btn-sm decrement" data-cart-id="{{ cart.id }}" data-cart-change-url="{% url 'carts:cart_change' %}">
+                                {% csrf_token %}
                                 <i class="bi bi-dash"></i>
                             </button>
                             <input type="text" class="form-control form-control-sm text-center number" value="{{ cart.quantity }}" readonly>
-                            <button type="button" class="btn btn-outline-dark btn-sm increment" data-cart-id="{{ cart.id }}" data-cart-change-url="">
+                            <button type="button" class="btn btn-outline-dark btn-sm increment" data-cart-id="{{ cart.id }}" data-cart-change-url="{% url 'carts:cart_change' %}">
+                                {% csrf_token %}
                                 <i class="bi bi-plus"></i>
                             </button>
                         </div>
