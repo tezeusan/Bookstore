@@ -27,7 +27,8 @@
                     </div>
                     <div class="col-4 col-md-3"><strong>{{ cart.products_price }} $</strong></div>
                     <div class="col-12 col-md-4 mt-3 mt-md-0">
-                        <a href="{% url "carts:cart_remove" %}" class="remove-from-cart" data-cart-id="">
+                        <a href="{% url "carts:cart_remove" %}" class="remove-from-cart" data-cart-id="{{ cart.id }}">
+                            {% csrf_token %}
                             <i class="bi bi-trash3-fill" style="font-size: 20px; color: darkred;"></i>
                         </a>
                     </div>
