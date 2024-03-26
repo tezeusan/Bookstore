@@ -1,0 +1,22 @@
+[33m3440d2753c121ba801fda416e2d05a7c4a170d69[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m Simple search created
+[33m17827ee418305241c06056151c26033d31143cd4[m Pagination bug fixed
+[33m7b51f200716b3ea1a68a1a0a8946fc5452954507[m Filter on the site page and urlencode
+[33m8bf6f82d92c7a67ecdef30dd040079a9fbb74bc2[m Added images and filters
+[33m190e8e414c377c4418bf22678704b958ffe57dee[m comments to the HTML template to explain each section.
+[33ma705696dd78bb8ca6de28fce06f11d61a58d4f90[m the first pagination option
+[33m80857f1a20350d26726ad555c852178e4b5e0a84[m book images
+[33m3968687efab9bf9d799cfc58ae83c8f2c357d68a[m pagination
+[33m31c401559b98531d550ba343be103a08156b0df4[m slug for categories
+[33m482d9e0669ff0fe1539fdf7219f1004fbd63bb13[m slug for books
+[33mc5fb58bc122a7617a82918210267c71bb1710146[m save point
+[33m6ea53ac4db927a807e180ffb220093c848a1f1b1[m save point
+[33me17cbed7004f857462c63c179ebba4fd5e6fb0fb[m Regitered simple tag for categories
+[33ma95f5bc87a9a5dc0acdbbdfcf861a9be50bbda8b[m Regitered simple tag for categories
+[33m388cde8f0e9a251726261faea564f037707eb398[m db
+[33mabeb9be20364be889d95464b8bcc70a2fea78cef[m adding info and images to catalog
+[33mc6db0de304455ef49b7f3da24830d9c91f2ec96f[m adding catalog and product pages
+[33mbea06256197ed9ce2067b17617aaeb7b72c2e4bb[m new urls
+[33me4d9cacbe1356c9130ad555d97c61615f756f8fa[m 4 commit
+[33mcfab91a23e51e8b4a2b4046796255fbe1b761383[m 3 commit
+[33m487dd9fb47652180388b087b90a0fccf75ab627e[m second commit
+[33m5a08ca8ba1764e59bd391fc85884ac22b0e8d9bc[m First commit
