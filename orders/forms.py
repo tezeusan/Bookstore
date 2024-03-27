@@ -1,4 +1,5 @@
 from django import forms
+import re
 
 
 class CreateOrderForm(forms.Form):
@@ -25,7 +26,7 @@ class CreateOrderForm(forms.Form):
         if not data.isdigit():
             raise forms.ValidationError("The phone number must contain only digits.")
 
-        pattern = re.compile(r'^\d{10}$')
+        pattern = re.compile(r'^\d{9}$')
         if not pattern.match(data):
             raise forms.ValidationError("Incorrect phone number format.")
 

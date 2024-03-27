@@ -45,3 +45,6 @@
         <h4 class="float-end"><strong>${{ carts.total_price }}</strong></h4>
     </div>
 </div>
+{% if carts and not order %}
+<a class="btn btn-primary" href="{% url "orders:create_order" %}">Checkout</a>
+{% endif %}

@@ -1,11 +1,13 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib import auth, messages
-from django.shortcuts import render, redirect
+from django.db.models import Prefetch
 from django.http import HttpResponseRedirect
+from django.shortcuts import redirect, render
 from django.urls import reverse
-
-from users.forms import UserLoginForm, UserRegistrationForm, ProfileForm
 from carts.models import Cart
+from orders.models import Order, OrderItem
+
+from users.forms import ProfileForm, UserLoginForm, UserRegistrationForm
 
 
 def login(request):
@@ -78,9 +80,21 @@ def profile(request):
             return HttpResponseRedirect(reverse("user:profile"))
     else:
         form = ProfileForm(instance=request.user)
+
+    orders = (
+        Order.objects.filter(user=request.user)
+        .prefetch_related(
+            Prefetch(
+                "orderitem_set",
+                queryset=OrderItem.objects.select_related("product"),
+            )
+        ).order_by("-id")
+    )
+
     context = {
         'title': 'Book Heaven - Profile',
         'form': form,
+        'orders': orders,
     }
     return render(request, 'users/profile.html', context)
 
