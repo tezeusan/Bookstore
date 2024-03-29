@@ -46,6 +46,12 @@
         <h4 class="float-end"><strong>${{ carts.total_price }}</strong></h4>
     </div>
 </div>
-{% if carts and not order %}
-<a class="btn btn-primary" href="{% url "orders:create_order" %}">Checkout</a>
-{% endif %}
+<div class="modal-footer">
+    {% if carts %}
+        {% if user.is_authenticated %}
+            <a class="btn btn-dark" href="{% url "orders:create_order" %}">Proceed to Checkout</a>
+        {% else %}
+            <a class="btn btn-dark" href="{% url "users:login" %}?next={% url "orders:create_order" %}">Login to Checkout</a>
+        {% endif %}
+    {% endif %}
+</div>
