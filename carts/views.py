@@ -40,8 +40,9 @@ def cart_add(request):
         "carts/includes/included_cart.html", {"carts": user_cart}, request=request)
 
     response_data = {
-        "message": "Товар добавлен в корзину",
+        "message": "Item added to your Cart",
         "cart_items_html": cart_items_html,
+
     }
 
     return JsonResponse(response_data)

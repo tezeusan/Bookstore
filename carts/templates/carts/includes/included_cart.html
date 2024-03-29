@@ -1,5 +1,6 @@
 {% load static %}
 {% load carts_tags %}
+{% block title %}{{ context }}{% endblock %}
 
 {% user_carts request as carts %}
 

@@ -37,6 +37,8 @@ def login(request):
 
     context = {
         'title': 'Book Heaven - Authorization',
+        'content': 'Book Heaven - Authorization',
+        'description': 'Log in to continue discovering the world of Books',
         'form': form,
     }
     return render(request, 'users/login.html', context)
@@ -62,6 +64,8 @@ def registration(request):
         form = UserRegistrationForm()
     context = {
         'title': 'Book Heaven - Registration',
+        'content': 'Book Heaven - Registration',
+        'description': 'Registrate to continue discovering the world of Books',
         'form': form
     }
     return render(request, 'users/registration.html', context)
@@ -93,6 +97,8 @@ def profile(request):
 
     context = {
         'title': 'Book Heaven - Profile',
+        'content': 'Book Heaven - Your profile',
+        'description': 'Somthing interesting here.',
         'form': form,
         'orders': orders,
     }
@@ -100,7 +106,12 @@ def profile(request):
 
 
 def users_cart(request):
-    return render(request, 'users/users_cart.html')
+    context = {
+        'title': 'Your Cart',
+        'content': 'Book Heaven - Your Cart',
+        'description': 'Here you can find all books you have added to your cart.',
+    }
+    return render(request, 'users/users_cart.html', context)
 
 
 @login_required

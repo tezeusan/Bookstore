@@ -68,6 +68,8 @@ def create_order(request):
 
     context = {
         'title': 'Home - Order Placement',
+        'content': 'Book Heaven - Your order',
+        'description': 'You are just one step away of getting Book of your dreams',
         'form': form,
         'order': True,
     }
